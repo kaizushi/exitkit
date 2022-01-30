@@ -478,7 +478,7 @@ Getting redsocks2 running on the isolated system...
 		address 192.168.0.2/24
 		gateway 192.168.0.1
 		network 192.168.0.0
-		post-up '/usr/sbin/iptables-restore < /etc/iptables.up.rules
+		post-up '/usr/sbin/iptables-restore < /etc/iptables.up.rules'
 
 	This part with the firewall can get a little complicated and different
 	on different systems. Yet the basic essentials of doing it are to save
