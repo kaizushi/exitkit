@@ -2,6 +2,12 @@ EXITKIT
 =======
 This is a guide you can read and some configuration files you can upload to have what I call a *private tor exit* for systems which are isolated behind a *tor transparent proxy/middlebox*. Such systems typically use Tor exits to access the *clearnet* (the regular Internet). One can run another transparent proxy locally that takes this traffic and sends it to a proxy server via a Hidden Service. This prevents bad exits from exploiting software updates and such. It also means that your requests are not from a known Tor exit which are often blocked by many service providers. This guide is based on what I have been doing in production. It was first written in January 2022.
 
+Licence
+-------
+This guide and the configuration files within are under the MIT Licence.
+
+See the file LICENCE for more details.
+
 About Kaizushi
 --------------
 I am a young lady who has been since my late adolesence hosting Tor hidden services on the dark web. I call that operation **Kaizushi's Little Onion Server** AKA **KLOS**
