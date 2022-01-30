@@ -33,7 +33,11 @@ Introduction:
 	the software unbound so that Tor still handles requests for onion
 	services but the others go to a different DNS server. This becomes
 	important when you want to make a mail service that sees MX records as
-	Tor's DNS support is limited and only performs A records via UDP.
+	Tor's DNS support is limited and only performs A records via UDP. This
+	has not been done yet and this guide will only use Tor DNS until I get
+	to that.
+
+
 
 Issues:
 	This guide is published on my Github repo and you should have obtained
