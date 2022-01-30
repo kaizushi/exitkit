@@ -1,0 +1,12 @@
+[Unit]
+Description=Redsocks transparent SOCKS proxy redirector
+After=network.target
+
+[Service]
+Type=forking
+EnvironmentFile=/etc/default/redsocks2
+ExecStartPre=/usr/local/sbin/redsocks -t -c /etc/redsocks/redsocks.conf
+ExecStart=/usr/local/sbin/redsocks -c /etc/redsocks/redsocks.conf
+
+[Install]
+WantedBy=multi-user.target

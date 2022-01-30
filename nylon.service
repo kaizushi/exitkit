@@ -1,0 +1,9 @@
+[Unit]
+Description=Nylon SOCKS proxy
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/nylon -i 127.0.0.1 -p 1080 -f
+
+[Install]
+WantedBy=multi-user.target
