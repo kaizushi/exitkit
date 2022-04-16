@@ -306,6 +306,10 @@ Getting the nylon proxy server running...
 
 	# cd nylon
 
+	You need to run the configure script from nylon. This script checks
+	things on your system such as dependencies and creates a Makfile. This
+	tells nylon how to build itself for your system.
+
 	Once that is done you should just need to type the command 'make' to
 	build the nylon proxy software. This command reads the Makefile and
 	follows its instructions to build this program. Once that is finished
