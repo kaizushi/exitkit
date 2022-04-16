@@ -389,14 +389,11 @@ Getting redsocks2 running on the isolated system...
 
 	# cd redsocks2
 
-	Yet this time we apply a patch which disables support for SSL
-	inspection, which will not be needed...
+	You then build it while telling into to disable SSL inspection
+	features. These features are not needed when using redsocks2 for the
+	purposes described in this guide.
 
-	# git apply patches/disable-ss.patch
-
-	You then build it in the typical way...
-
-	# make
+	# make DISABLE_SHADOWSOCKS=true
 
 	Once this has completed we have to install redsocks2 but its Makefile
 	does not have a target called 'install' and so we cannot do the usual
