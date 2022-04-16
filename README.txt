@@ -493,6 +493,31 @@ Getting redsocks2 running on the isolated system...
 	your clearnet VPS that is private exit. If it outputs some other IP
 	address it that of a Tor exit and something has gone wrong.
 
+DNS configuration...
+
+	When you are behind a Tor middlebox it provides the answers for DNS
+	queries. By default on Debian the system uses systemd-resolved to
+	handle DNS. This by default will use DNS information from your
+	networking configuration. You should just use Tor's DNS server. At a
+	future date I plan to edit this guide so people use unbound.
+
+	The DNS server in Tor when running as a transparent proxy only handles
+	basic DNS A record queries. For more advanced use of exitkit such as
+	for mail servers you will want to use unbound to send onion queries to
+	Tor but do other DNS resolution elsewhere. This part of the guide has
+	not been written yet.
+
+	Disable systemd-resolved...
+
+	# systemctl disable systemd-resolved.service
+
+	Configure /etc/resolv.conf to use your middlebox...
+
+	# echo "nameserver 192.168.47.2" > /etc/resolv.conf
+
+	The above example uses the IP address my middlebox is usually on. You
+	should replace that IP with that of your middlebox.
+
 Congratulations...
 
 	You now have your system using a private Tor exit to do things. If
