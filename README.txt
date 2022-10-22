@@ -75,7 +75,7 @@ Software involved:
 	  redsocks2 on your system.
 	- nylon (https://github.com/ngocbd/nylon) is a SOCKS proxy server
 	  required on the system used as the private exit on the clearnet.
-	- redsocks2 (https://github.com/zcotape/redsocks2) is the transparent
+	- redsocks2 (https://github.com/kaizushi/redsocks2) is the transparent
 	  proxy software which gets traffic from a firewall redirect and
 	  converts it into SOCKS requests that are sent to the hidden service
 	  of your nylon proxy.
@@ -383,17 +383,15 @@ Getting redsocks2 running on the isolated system...
 	in this case we will also disable a feature we do not use. Much like
 	before you run this to grab its source code...
 
-	# git clone https://github.com/zcotape/redsocks2
+	# git clone https://github.com/kaizushi/redsocks2
 
 	You then change to the directory that created...
 
 	# cd redsocks2
 
-	You then build it while telling into to disable SSL inspection
-	features. These features are not needed when using redsocks2 for the
-	purposes described in this guide.
+	And make the project...
 
-	# make DISABLE_SHADOWSOCKS=true
+	# make
 
 	Once this has completed we have to install redsocks2 but its Makefile
 	does not have a target called 'install' and so we cannot do the usual
